@@ -1,0 +1,28 @@
+@charset "utf-8";
+body{width:100%; min-height:100%; background:#eee;}
+input{outline: none;}
+.lightgreen{color:lightgreen}
+.green{color:green}
+
+.container{}
+.white-area{margin:20% auto; padding:30px; background:#fff; border:1px solid #ccc; box-shadow:0 0 10px #ccc; border-radius: 15px;}
+ 
+.white-area .tit-area{padding-bottom:10px; border-bottom:2px solid #ccc;}
+.white-area .tit-area .tit{font-size:24px; font-weight: bold;}
+
+.white-area .cont-area .input-area,
+.white-area .cont-area .info-area{display:inline-block; width:49.6%; box-sizing: border-box;}
+.white-area .cont-area .input-area .gray-box{background:#eee; padding:5%; border-radius: 10px;}
+.white-area .cont-area .info-area{padding:0 1%;}
+.white-area .cont-area .info-box{padding:5%; }
+.input-area dl{padding:5px 0;}
+.input-area dt{padding-bottom:5px; font-weight:800; font-size:14px;}
+.input-area dd input{width:100%; padding:6px; border:1px solid#ccc; border-radius: 5px;}
+.input-area .btn{padding:6px 40px; margin:0;border-radius: 5px; }
+.btn.btn-danger{background:rgb(235, 100, 100); border:none; color:#fff; }
+
+.info-area .top-txt > p{font-size:18px; font-weight:bold;}
+.info-area .top-txt ul{padding-top:10px;}
+.info-area .top-txt ul li{padding:2px 0; font-size:14px;}
+.info-area .link-area a{display:block; margin:20px 0; padding:5px; text-decoration: none; border-radius: 5px; text-align: center; background:rgb(131, 199, 255); color:#fff;}
+.info-area .bottom-txt{font-size:12px;}

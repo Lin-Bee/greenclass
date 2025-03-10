@@ -1,0 +1,23 @@
+@charset "utf-8";
+div{width:300px; height:300px; font-size:2rem; text-align:center; line-height: 300px;}
+
+.d1{background:blue;}
+
+.d2{background:red;}
+
+.d3{background:yellow; transition:1s;}
+
+.d2{
+  animation: 'x-mas' 3s infinite;
+}
+
+@keyframes x-mas {
+  0% {
+    background:red;
+  }
+  100% {
+    background:green;
+  }
+}
+
+.d3:hover{position:relative; top:20px; left:20px; background:green;}

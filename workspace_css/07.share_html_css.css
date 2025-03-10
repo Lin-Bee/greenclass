@@ -1,0 +1,8 @@
+@charset "utf-8";
+
+h2{color:bisque;
+  background-color: blueviolet;
+  font-weight: 800;
+}
+
+p{border:1px solid blue;}

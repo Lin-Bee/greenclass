@@ -1,0 +1,27 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+*{font-family: "Montserrat", serif;}
+.txt.center{text-align: center;}
+body{background:lightslategray;}
+.container{width:80%;margin:20px auto; padding:8px; background:#fff; border-radius: 10px; }
+
+.pro-txt-area{width:80%; margin: 0 auto; padding-bottom:30px; text-align: center;}
+.pro-txt-area .top-tit{display:inline-block; border-radius: 5px; padding:5px; background:pink; color:#fff; }
+.pro-txt-area .m-tit{padding:20px 0;line-height:1;font-weight:bold; font-size:36px;}
+.pro-txt-area .m-tit .skblue{color:skyblue;}
+
+.pro-list{width:100%; flex-wrap: wrap;}
+.pro-list .pro-box{width:24%; margin:0.5%; position:relative; }
+.pro-list .pro-box .img-box{position:relative; width:100%; height:100%;object-position: center center; overflow: hidden; }
+.pro-list .pro-box .img-box img{width:100%; height:100%; min-width: 100%;}
+.pro-list .pro-box .txt-box{width:100%; position:absolute; top:0%; left:0%; width:100%; height:100%; padding:0px; transition: 0.5s all; background:#000; color:#fff; opacity: 0;}
+.pro-list .pro-box:hover .txt-box{opacity: 1;}
+
+.pro-list .pro-box dl{width:80%; margin:0 auto;}
+.pro-list .pro-box dt{font-weight:bold; padding-bottom:10px;}
+.pro-list .pro-box dd{}
+.pro-list .pro-box dd p{padding-bottom:10px;}
+.pro-list .pro-box .icon-box{padding-top:10px;}
+.pro-list .pro-box .icon-box span{display:block; margin:0.5px;}
+.pro-list .pro-box .icon-box span:hover{color:skyblue}

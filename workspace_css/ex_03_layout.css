@@ -1,0 +1,21 @@
+@charset "utf-8";
+@font-face {
+  font-family: 'NPSfontBold';
+  src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2310@1.0/NPSfontBold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+}
+*{font-family: 'NPSfontBold';}
+.inner{width:800px; margin:0 auto;}
+.txt-right{text-align: right;}
+.txt-red{color:red;}
+h2{padding-bottom:10px;font-size:2rem; font-weight: 600; text-align: center;}
+input, select, button{background:#5d80f0; color:#fff;}
+
+.tb-area{width:100%; padding:5% 0;}
+.tb-area table{width:100%; border-top:none; margin:20px 0;}
+.tb-area table tr{}
+.tb-area table th{background:#5d80f0; padding:10px; border:2px solid #fff; font-weight:bold; color:#fff;}
+.tb-area table td{background:#c8d5ff; padding:10px; border:2px solid #fff; text-align: center;}
+
+.btn-are{padding-top:30px;}

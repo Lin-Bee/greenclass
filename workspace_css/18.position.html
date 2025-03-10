@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="./reset.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="./18.position.css">
+</head>
+<body>
+  <h2>position:fixed</h2>
+  <div>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cum similique accusantium nisi distinctio repellendus vitae temporibus explicabo. Aliquid deleniti non, ut, odit nihil officiis consequatur qui vel adipisci inventore, consectetur blanditiis eaque. Fugit cum rerum molestias architecto minima aliquam asperiores deleniti optio, qui ea commodi quod atque et, sequi inventore, consectetur tempora illum nesciunt voluptatibus nemo! Consequatur distinctio quam odio magnam aperiam facilis commodi, vel aliquam iste provident, itaque autem similique aut error aspernatur pariatur quaerat. Vel, laboriosam accusamus ratione veniam natus culpa optio fugit reiciendis quod adipisci magni consectetur beatae expedita ab inventore impedit mollitia autem modi accusantium eaque?</div>
+
+  <div>
+    <p>1.position:컨텐츠의 위치를 어디에?</p>
+    <ul>
+      <li>-statick:(default)</li>
+      <li>-fixed:화면 전체를 기준으로 고정, 스크롤되어도 움직이지 않음</li>
+      <li>-absolute:고정(화면좌상단 기준), 스크롤되면 움직임</li>
+      <li>-relative:static 기준에서 상대적으로 치조정</li>
+      <li>
+        *fixed,absolute,-relatve <br>
+        ->left,right,top,bottom
+      </li>
+      <li>*포지션을 변경하면 대부분의 태그는 블록요소로 변경</li>
+      <li>*asolute속성값은 통상적으로 relative속성값과 께 씀</li>
+    </ul>
+  </div>
+  <br>
+  <div>
+    <p>2.overflow:컨텐츠가 영역의 범위를 초과할때 어떻게?</p>
+    <ul>
+      <li>overflow:visivle:(default)</li>
+      <li>overflow:hidden:넘치는 부분은 보이지 않게 하겟다</li>
+      <li>overflow:scroll: 스크롤생성</li>
+      <li>overflow:auto: 범위를 벗어날때만 스크롤로 생성</li>
+    </ul>
+  </div>
+  <br>
+  <div>
+    <p>3.요소 (태그)보이기 숨기기</p>
+    <ul>
+      <li>display:none; -> 요소가 사라지고 공간도사라짐</li>
+      <li>visibility:hidden; -> 공간은 유지하고 요소만 사라짐</li>
+      <li>opacity:0~1; -> 투명도조절 공간유지</li>
+    </ul>
+  </div>
+  <button type="button" class="arrow-span"><i class="bi bi-arrow-up-circle"></i></button>
+</body>
+</html>

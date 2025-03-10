@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="./reset.css">
+  <link rel="stylesheet" href="./common.css">
+  <link rel="stylesheet" href="./layout.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="./22.absolute_relative_2.css">
+
+  <script>
+    $(document).ready(function(){
+        $(".list-box").click(function(){
+            $(this).toggleClass("on");
+        });
+    });
+</script>
+</head>
+
+<body>
+  <div>
+    <h3>이미지에 내용 겹쳐넣기</h3>
+    <div class="list-area flex ju-between">
+      <div class="list-box">
+        <div class="flex ju-between fd-column ai-center list-info">
+          <div class="img-area">
+            <div class="heart">
+              <p class="ck-noting"><i class="bi bi-heart"></i></p>
+              <p class="ck-like"><i class="bi bi-heart-fill"></i></p>
+            </div>
+            <img src="./인물_4.jpg" alt="집사진">
+          </div>
+          <div class="txt-area">
+            <p class="price primary">$0000</p>
+            <p class="tit">루루피</p>
+            <p class="info ellipis">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam ipsa nisi, labore ducimus voluptates odio excepturi dolores quae corrupti architecto.</p>
+          </div>
+        </div>
+      </div>
+        
+      </div>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="./09.inline_block.css">
+</head>
+<body>
+  <h2>블록요소와 인라인요소</h2>
+  <!-- 블록요소 -->
+   <!-- 
+    1.부모태그의 크기만큼 영역이 잡힘
+    2.너비를 변경할 수 있음
+    3.너비를 변경해도 다른 태그가 같은 라인에 올수 없음
+   -->
+  <div class="type1">hello</div>
+  <div class="type1">hello</div>
+  <hr>
+  
+  <!--인라인 태그-->
+  <!-- 
+    1.내용만큼의 크기로 영역이 잡힌다.
+    2.크기변경불가
+    3.한줄에 여러 태그 작성 가능
+    -->
+    <span class="type2">안녕</span>
+    <span class="type2">안녕</span>
+    
+    <hr>
+  <!--
+    블록>인라인   / 인라인>블록 
+   -->
+    <div class="ch_type">인라인할거임</div>
+    <div class="ch_type">인라인할거임</div>
+
+    <span class="ch_type2">블록할거임</span>
+    <span class="ch_type2">블록할거임</span>
+</body>
+</html>

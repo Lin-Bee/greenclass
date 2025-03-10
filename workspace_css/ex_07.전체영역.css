@@ -1,0 +1,12 @@
+@charset "utf-8";
+body{background:#ddd;}
+header{background:#000; color:#fff;}
+header .top{height:80px; }
+header h1{margin-right:10px;}
+nav ul li a{display:block; min-width:80px; padding:29px 10px;text-decoration: none; color:hsl(0, 0%, 100%);}
+nav .menu-list > li{position:relative; }
+nav .menu-list > li:hover > a{font-weight: bold; color:yellow;}
+nav ul li:hover ul{height:auto;}
+nav ul li .smenu-list{position:absolute; top:79px; left:0; height:0; background:#aaa; overflow: hidden;}
+nav ul li .smenu-list li:hover{background:#666;}
+nav ul li .smenu-list li a{padding:10px;}

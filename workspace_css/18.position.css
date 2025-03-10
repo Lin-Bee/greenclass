@@ -1,0 +1,14 @@
+@charset "utf-8";
+
+/*position 속성 : 요소의 배치 방식을 지정
+  position:static; -> 기본값
+  position값을 변경하면 대부분의 태그는 inline-block으로 자동 변경된다.
+*/
+body{line-height:150px;}
+button{background:#fff; border:none;}
+.arrow-span{
+  /*position을 fixed로 고정하면 
+  top, left,right,bottom 속성도변경해야함*/
+  display: block;
+  position:fixed; right:20px; bottom:20px;
+line-height:150%; font-size:30px}

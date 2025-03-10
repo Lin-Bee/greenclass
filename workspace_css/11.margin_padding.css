@@ -1,0 +1,14 @@
+@charset "utf-8";
+
+.d1{width:200px; border:1px solid #333;
+padding:20px; }
+.d2{width:200px; border:1px solid #333;
+  margin:20px; }
+.d3{width:200px; border:1px solid #333;
+  padding-top:50px;
+  padding-right:20px;
+  padding-bottom:10px;
+  padding-left:5px;
+}
+.d4{border:1px solid #333; padding:0 9px 90px 50px;}
+.d5{width:200px; border:1px solid #333; padding:50px 20px;}

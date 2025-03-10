@@ -1,0 +1,251 @@
+<!-- html은 태그로 이루어진문서
+태그는 <> 기호에 감싸진 단어를 의미
+태그는 통상적으로 여는 태그, 닫는 태그로 이루어짐.
+
+태그소개
+<!DOCTYPE html> : 현재 문서는 html 문서임을 나타냄, 없어도 됨
+<html></html> : html문서의 시작과 끝을 나타냄
+<head></head> : html 문서 해석에 필요한 정보를 작성하는 부분
+메타정보, 스타일시트, 자바스크립트, 문서의 제목 등
+<body><body> : 웹페이지에 나타나는내용
+-->
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="./common.css">
+  <link rel="stylesheet" href="./layout.css">
+</head>
+<body>
+  <style>
+    #ppt-area{background:#ddd;}
+    .paper{width:297mm; height:210mm; padding:20mm; margin:10mm auto; box-sizing: border-box; border-radius:3px; background:#111; color:#fff; box-shadow:0 0 5px #ccc;}
+    .primary{color:#e57e10}
+    @page{size:A4; margin:0;}
+    @media print{
+      #ppt-area{width:297mm; height:210mm; background:#fff;}
+      .paper{margin:0; border:initial; margin: 0;border: initial; border-radius: initial;width: initial;min-height: initial;box-shadow: initial;background: initial;page-break-after: always;}
+    }
+  </style>
+  <header>
+    <nav>
+      <ul>
+        <li>
+          <a href="">about ★ |</a>
+          <a href="">project ★ |</a> <!-- 기본 보여주는페이지 -->
+          <!-- <a href="">contact</a>
+           보통 페이지마다 맨밑에 들어가나봐
+           문의는 문의하기(백), DM , 전화or메일(숨김처리)  
+           -->
+          <a href="">instagram (icon) |</a>
+          <a href="">PPT</a>
+        </li>
+      </ul>
+    </nav>
+  </header> 
+  <hr>
+  <div>hello hello 이젠 굿바이굿바이</div>
+  <hr>
+  <main>
+    <input type="button" value="#ppt-area의 paper 다운받기" onclick="window.print({ media: 'print', landscape:true, });">
+    <div id="ppt-area">
+      <div class="paper">
+        <div class="cont-ppt bg-primary">
+          표지
+        </div>
+      </div>
+      <div class="paper">
+        <!-- 헤드 공용으로 불러가기 -->
+        <div class="ppt-head-area flex ju-between ai-center">
+          <div class="left-top">
+            <p>Development Portfolio</p>
+            <p>KIM NA GYOUNG</p>
+          </div>
+          <div class="right-top">깃허브주소</div>
+        </div>
+        <!-- 헤드 공용으로 불러가기 -->
+        <div>나중에 확인할 포폴 참고사이트
+          <a href="https://cliff-emoji-f8f.notion.site/ec353ff6a93d43eeb3638e3d9b32a87f">제로베이스가공개한 포폴</a>
+        </div>
+        <div class="cont-ppt">
+          <div class="tit-box">menu</div>
+          <div class="cont-box">
+            <ol class="flex ju-top">
+              <li>
+                <p>01_STEP</p>
+                <dl>
+                  <dt>ABOUT ME</dt>
+                  <dd>
+                    <ul>
+                      <li>기본정보</li>
+                      <li>기술스택 (나이런거만들어봄,데이터 처리와 시스템 구축)</li>
+                    </ul>
+                  </dd>
+                </dl>
+              </li>
+              <li>
+                <p>02_STEP</p>
+                <dl>
+                  <dt>프로젝트 _ A (개인)</dt>
+                  <dd>
+                    <ul>
+                      <li>프로젝트 기본소개 <sub>(소개/기간&인원/핵심기능/팀성과/기여도)
+                        Framework: Next.js
+                        Language: TypeScript
+                        Design System : Chakra UI
+                        Login: JWT, OAuth 2.0
+                        State Management: Recoil React Query(Tanstack Query v4)
+                        Data Fetching : Axios React Query(Tanstack Query v4)
+                        E2E Test : Cypress
+                        Deploy : Vercel
+                        CI/CD : Github Actions Husky
+                        Design Tools : Figma InVision
+                        Communication Tools : Notion Gather Slack
+                      </sub></li>
+                      <li>아키텍처 (구조확인 )</li>
+                      <li>api설계(구조및 흐름확인도(erd(텍스트구조형)+와이어프레임) - 텍스트형 와이트프레임 or이미지형도 있음)
+                        프로젝트 구조를 살명할때에는 유저 와 과정 서버는 어디를쓰는지와같은것 확인
+
+                      </li>
+                      <li>구현된 서비스스크린샷(및 링크) 및 기능설명\
+                        <br>주기능?ex회원가입,로그인,비번,
+                        <br>프론트일때 예외처리  
+                        <br>백엔드일때 구현속도 및 기능관련
+                        <br> &lt; 그럼 프로젝트 3개니까 하나는 백 하나는 프론트로 들어간다그럴까
+                      </li>
+                      <li>직접구현한 기능(어떤거있는지)
+                        링크/메소드/상태/바디/response/error/설명
+
+                      </li>
+                    </ul>
+                  </dd>
+                </dl>
+              </li>
+              <li>
+                <p>03_STEP</p>
+                <dl>
+                  <dt>프로젝트 _ B (팀)</dt>
+                  <dd>노션???</dd>
+                </dl>
+              </li>
+              <li>
+                <p>04_STEP</p>
+                <dl>
+                  <dt>프로젝트 _ C (팀)</dt>
+                  <dd>각각의 스탭을 작성</dd>
+                </dl>
+              </li>
+            </ol>
+          </div>
+        </div>
+      </div>
+      <div class="paper">
+        <!-- 헤드 공용으로 불러가기 -->
+        <div class="ppt-head-area flex">
+          <div class="left-top">
+            <p>Development Portfolio</p>
+            <p>KIM NA GYOUNG</p>
+          </div>
+          <div class="right-top">깃허브주소</div>
+        </div>
+        <style>
+          .cont-ppt.menu{display:flex; flex-direction: column; justify-content: end;}
+          .cont-ppt.menu ol li{width:20%;}
+        </style>
+        <div class="cont-ppt menu">
+          <div class="tit-box">menu</div>
+          <div class="cont-box">
+            <ol class="flex">
+              <li>
+                <p>01_STEP</p>
+                <dl>
+                  <dt>ABOUT ME</dt>
+                  <dd>
+                    <ul>
+                      <li>기본정보</li>
+                      <li>기술스택</li>
+                    </ul>
+                  </dd>
+                </dl>
+              </li>
+              <li>
+                <p>02_STEP</p>
+                <dl>
+                  <dt>프로젝트 _ A (개인)</dt>
+                  <dd>
+                    <ul>
+                      <li>
+                        <p>프로젝트 개요</p>
+                        <p>(소개/기간&인원/핵심기능/팀성과/기여도)</p>
+                      </li>
+                      <li>아키텍처</li>
+                      <li>api설계</li>
+                      <li>구현된 서비스스크린샷(및 링크) 및 기능설명</li>
+                      <li>직접구현한 기능</li>
+                    </ul>
+                  </dd>
+                </dl>
+              </li>
+              <li>
+                <p>03_STEP</p>
+                <dl>
+                  <dt>프로젝트 _ B (팀)</dt>
+                  <dd>노션???</dd>
+                </dl>
+              </li>
+              <li>
+                <p>04_STEP</p>
+                <dl>
+                  <dt>프로젝트 _ C (팀)</dt>
+                  <dd>각각의 스탭을 작성</dd>
+                </dl>
+              </li>
+              <li>
+                <p>05_STEP</p>
+                <dl>
+                  <dt>프로젝트 _ B (팀)</dt>
+                  <dd>노션???</dd>
+                </dl>
+              </li>
+            </ol>
+          </div>
+        </div>
+      </div>
+      <div class="paper">
+        <div class="cont-ppt">
+          <!-- 헤드 공용으로 불러가기 -->
+          <div class="ppt-head-area flex ju-between">
+            <div class="left-top">
+              <p>Development Portfolio</p>
+              <p>KIM NA GYOUNG</p>
+            </div>
+            <div class="right-top"></div>
+          </div>
+          <!-- 헤드 공용으로 불러가기 -->
+          <div class="ppt-info-area">
+            <div class="">
+              <p class="big-num"></p>
+              <dl>
+                <dt>대메뉴타이틀</dt>
+                <dd>서브설명</dd>
+              </dl>
+            </div>
+          </div>
+          <!-- 바디도 공용으로 불러가기 -->
+          <div class="ppt-foot-area">
+            <p style="text-align: center;">&copy; 김나쓰</p>
+          </div>
+          <!-- 바디도 공용으로 불러가기 -->
+        </div>
+      </div>
+      <div class="paper">
+        <div class="cont-ppt">
+          
+        </div>
+      </div>
+    </div>
+  </main>
+</body>
+</html>

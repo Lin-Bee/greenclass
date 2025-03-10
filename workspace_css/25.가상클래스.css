@@ -1,0 +1,65 @@
+@charset "utf-8";
+
+article{margin:30px;}
+div{width:150px; height:150px; background:crimson; border:5px solid green; line-height: 150px; font-size:2rem; text-align: center; color:#fff;
+
+  /*움직이는데 0.5초걸린다*/
+transition:0.5s all;
+
+}
+
+/*가상클래스 : 가상의 선택자
+  p:first-child{}
+  p:nth-child(n){}
+  : 을 통해 css를 지시하는걸 가상의선택자
+*/
+
+/* 마우스 올릴때  
+  :hover
+*/
+.d1:hover{
+  width:300px;
+  height:300px;
+  line-height: 300px;
+  cursor: pointer;
+}
+
+.d2:hover{
+  background:green;
+  border:5px solid crimson;
+  
+}
+
+input{width:150px;outline:none; transition:0.5s all;}
+
+input:focus{width:300px;
+  border:1.5px solid green;
+  outline: 1.5px solid green;
+  background:red;
+  color:white;
+}
+
+.li-1{position:relative;}
+
+/* before & after */
+/* 선택자 앞에 인라인 요소를 추가 */
+.li-1:before{
+  /* 추가할 요소를 넣어야한다. */
+  content: "new";
+  background-color: blue;
+  color:#fff;
+  border-radius: 6px;
+  padding:3px 5px;
+  line-height: 1;
+  margin-right:6px;
+}
+
+.li-1:after{
+  position:absolute;
+  content: "";
+  background: url("./인물_4.jpg") center center no-repeat;
+  background-size:contain;
+  width:300px; padding-top:40%;
+  display:block;
+  top:0; left:30px;
+}

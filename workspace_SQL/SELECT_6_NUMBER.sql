@@ -1,0 +1,16 @@
+#CEIL(숫자) : 올림한다
+#FLLOR(숫자) : 내림한다
+#ROUND(숫자) : 반올림
+
+
+SELECT CEIL(70.1) , FLOOR(70.1), ROUND(70.1);
+SELECT ROUND(123.456,1) , ROUND(123.456,2);
+
+#TRUNCATE : 버림
+SELECT TRUNCATE(123.456,1), TRUNCATE(123.456,2);
+
+#mod 자바의 나머지 구하는 %
+SELECT MOD(10,3);
+
+SELECT * FROM emp
+WHERE MODE(EMPNO,2) = 0;

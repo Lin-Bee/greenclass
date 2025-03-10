@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<style>
+  input,
+  select,
+  button{min-width:200px; padding:10px; margin:5px 0; border: 1px solid #aaa; border-radius:5px;}
+  input[type=checkbox],
+  input[type=radio]{min-width:auto;}
+  input[type=button]:hover,
+  button:hover{cursor: pointer; background: #333; color:#fff;}
+  select:hover{cursor: pointer;}
+  input[type=button]:active,
+  button:active{ background:#b20a0a; color:#fff}
+  textarea{resize: none;}
+</style>
+<body>
+  <h2>폼 요소 - 1</h2>
+  <input type="text" placeholder="ID" > <br/>
+  <input type="password" placeholder="PASSWORD" value=""> <br/>
+  <input type="number" max="5" min="1" value="3" placeholder="숫자 카운트"> <br/>
+  <input type="date" value="date"> <br/>
+  <input type="email"> <br/>
+  <input type="button" value="button" onclick="alert(5)"> <br/>
+  
+  <input type="checkbox" name="">ALL
+  <input type="checkbox" name="" >독서
+  <input type="checkbox" checked>운동
+  <input type="checkbox">요가
+  <br/>
+  <!-- radio에서 하나의 묶음을 인식시키기 위해 같은 name속성을 부여함 -->
+  <input type="radio" name="gender" checked>여성
+  <input type="radio" name="gender">남성
+  <br/>
+  <input type="file">
+  <br/>
+  <select name="" id="">
+    <option value="">010</option>
+    <option value="">011</option>
+    <option value="">012</option>
+  </select>
+  <br>
+  <select name="" id="">
+    <option value="" selected disabled>전화번호를 선택해주세요</option>
+    <option value="">010</option>
+    <option value="">011</option>
+  </select>
+  <br>
+  <textarea rows="5" cols="40" name="" id=""></textarea>
+  <br>
+  <!-- 버튼에 type넣기 기억하기  -->
+  <button type="button" value="">버튼입니다만</button>
+  <br>
+
+  <input type="text" placeholder="text type 글자수 제한" maxlength="5"> <br/>
+  <input type="text" placeholder="이름" value="이름인걸까"> <br/>
+
+</body>
+</html>

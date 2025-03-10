@@ -1,0 +1,44 @@
+@charset "utf-8";
+.grid{display:grid;}
+
+.container{
+  width: 600px;
+  height:400px;
+  margin:20px auto;
+  border:1px solid black;
+
+  /* 그리드는 flex와 table사이 어디
+    px % fr repeat
+  */
+  /*
+  지정 크기만큼 잡혀라
+  grid-template-columns: 50px 100px 50px 200px;
+  grid-template-rows: 100px 200px 300px; */
+/* 
+  지정퍼센트만큼 잡혀라
+  grid-template-columns: 10% 20% 70%;
+  grid-template-rows: 10% 20% 10%; */
+
+  /* flex grow 비율
+  grid-template-columns: 1fr 2fr 1.5fr;
+  grid-template-rows: 1fr 2fr 1fr;
+*/
+  /* 반복 repeat (갯수,크기) 
+  grid-template-columns: 1fr repeat(3,100px);
+  grid-template-rows: repeat(3, 25%); */
+
+  /*부모만큼알아서*/
+  grid-template-columns: repeat(3,auto);
+  grid-template-rows: auto; 
+
+  grid-template-columns: repeat(3,100px);
+  grid-template-rows: auto; 
+
+  /* gap:10px 10px; */
+
+  align-content: space-around;
+  justify-content: center;
+}
+
+.container > div{ border:1px solid red; }
+.container > div:nth-child(3){font-weight:700;}

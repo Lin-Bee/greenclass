@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    h2{text-align: center;}
+    p{text-align: center;}
+    div.img-box{width:60%; margin:0 auto;}
+    div.img-box img{width:100%;}
+  </style>
+</head>
+<body>
+  <h2>자바스크립트 시작하기</h2>
+  <p>나는 나는 알코올</p>
+  <script>
+    // 이것이 자바스크립트이다
+    console.log('hello javascript'); 
+    //콘솔창에서확인가능
+
+    let num = 5;
+    let num2 = 5.5;
+    let num3 = 'hello';
+    let num4 = 'hi';
+    let num5 = true;
+
+    num3 = num;
+
+    console.log(num); 
+    console.log(num2); 
+    console.log(num3); 
+    console.log(num4); 
+    console.log(num5); 
+
+    //let, const의 차이점 - var
+    //변수: 변하는 값, 상수 : 변하지 않는 값
+    const name = 'kim';
+    // name = 'lee'; const로 선언된 값은 한번 값이 할당되면 변경 불가!!
+
+    let data = null;
+    let data2; //undefined
+    console.log(data);
+    console.log(data2);
+    //console.log(MyHome); 선언안되서 오류남
+
+    let data_1=5;
+    let data_2=10;
+    console.log(data_1,data_2,3,"hello");
+    
+    let nicname = "김자바";
+    let addr = "울산시";
+    let score = 80;
+    //템플릿 리터럴문법
+    console.log(`이름은 ${nicname}이고,${addr}에 사는,${score}점 자리 사람입니다`);
+
+    let num8 = 7;
+    console.log(num8++) //7
+    num8++;
+    ++num8;
+
+    let data_3 = true;
+    console.log(!data_3); //false
+
+    console.log(3==3)//true
+    console.log(3=='3') //true
+    console.log(3==='3') //false 자료형이달라서
+
+    
+
+  </script>
+</body>
+</html>

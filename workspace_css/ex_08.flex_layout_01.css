@@ -1,0 +1,7 @@
+@charset "utf-8";
+#wrap{width:50%; height:300px;}
+header{border:5px solid aqua; height:10%;}
+.container{height:80%; border:5px solid red;}
+.container aside{width:30%;border:5px solid magenta;}
+.container .content{width:70%;}
+footer{height:10%;; border:5px solid gray;}

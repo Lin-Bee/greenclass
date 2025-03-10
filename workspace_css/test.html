@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>회원가입 페이지</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f4f4f4;
+        }
+        .signup-container {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 300px;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        li {
+            margin-bottom: 15px;
+        }
+        p {
+            margin: 0;
+        }
+        input[type="text"],
+        input[type="password"],
+        input[type="radio"] {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        .radio-group {
+            display: flex;
+            justify-content: space-between;
+        }
+        .radio-group label {
+            margin-right: 10px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="signup-container">
+    <ul>
+        <li>
+            <p>이름</p>
+            <input type="text" placeholder="이름을 입력하세요">
+        </li>
+        <li>
+            <p>아이디</p>
+            <input type="text" placeholder="아이디를 입력하세요">
+        </li>
+        <li>
+            <p>비밀번호</p>
+            <input type="password" placeholder="비밀번호를 입력하세요">
+        </li>
+        <li>
+            <p>성별</p>
+            <div class="radio-group">
+                <label><input type="radio" name="gender" value="male"> 남성</label>
+                <label><input type="radio" name="gender" value="female"> 여성</label>
+            </div>
+        </li>
+        <li>
+            <p>연령대</p>
+            <div class="radio-group">
+                <label><input type="radio" name="age_group" value="10s"> 0~10대</label>
+                <label><input type="radio" name="age_group" value="20s"> 20~30대</label>
+                <label><input type="radio" name="age_group" value="40s"> 40~50대</label>
+                <label><input type="radio" name="age_group" value="60s"> 50~60대</label>
+                <label><input type="radio" name="age_group" value="other"> 기타</label>
+            </div>
+        </li>
+        <li>
+            <button type="submit">회원가입</button>
+        </li>
+    </ul>
+</div>
+
+</body>
+</html>

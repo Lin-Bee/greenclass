@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>회원가입</title>
+    <link rel="stylesheet" href="./common.css" />
+    <link rel="stylesheet" href="./layout.css" />
+  </head>
+  <style>
+    ul.list li {
+      list-style: none;
+      padding-left: 10px;
+      position: relative;
+    }
+    ul.list li::before {
+      position: absolute;
+      left: 0px;
+      content: "-";
+    }
+
+    table {
+      width: 100%;
+      border-top: 2px solid #ccc;
+    }
+    th {
+      width: 20%;
+      border: 1px solid #ccc;
+      text-align: left;
+    }
+    td {
+      width: 80%;
+      padding: 5px;
+    }
+    td .sub {
+      font-size: 12px;
+    }
+    input.input-min {
+      min-width: 80px;
+    }
+
+    .signup {
+      font-size: 13px;
+      padding-bottom: 5rem;
+    }
+    .tb-area {
+      padding-top: 30px;
+    }
+    .title-area h3 {
+      padding-left: 15px;
+      font-size: 20px;
+      font-weight: bold;
+      position: relative;
+    }
+    .title-area h3::before {
+      width: 8px;
+      height: 20px;
+      background: #666;
+      border-radius: 3px;
+      position: absolute;
+      top: 3px;
+      left: 0px;
+      content: "";
+    }
+    .title-area h4 {
+      font-size: 18px;
+      font-weight: bold;
+    }
+  </style>
+  <body>
+    <div id="wrap">
+      <section class="signup">
+        <div class="inner">
+          <div class="tb-area">
+            <div class="title-area">
+              <h3>회원가입</h3>
+            </div>
+            <table>
+              <tbody>
+                <tr>
+                  <th>회원구분 <span class="warning">*</span></th>
+                  <td>
+                    <span
+                      ><input
+                        type="radio"
+                        name="mb_type"
+                        class="radio"
+                        checked
+                      />개인회원</span
+                    >
+                    <span
+                      ><input
+                        type="radio"
+                        name="mb_type"
+                        class="radio"
+                      />외국인회원(foreigner)</span
+                    >
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="tb-area">
+            <div class="title-area flex ai-center ju-between">
+              <h4>기본정보</h4>
+              <p><span class="txt warning">*</span>필수입력사항</p>
+            </div>
+            <table>
+              <tr>
+                <th>아이디 <span class="warning">*</span></th>
+                <td>
+                  <input
+                    type="text"
+                    minlength="4"
+                    maxlength="16"
+                    name=""
+                    id=""
+                    required
+                  />
+                  <span class="sub">(영문소문자/숫자, 4-16자)</span>
+                </td>
+              </tr>
+              <tr>
+                <th>비밀번호 <span class="warning">*</span></th>
+                <td>
+                  <input
+                    type="password"
+                    minlength="8"
+                    maxlength="16"
+                    placeholder="비밀번호를 입력해주세요."
+                    name="mb_pass"
+                    id="mb_pass"
+                    title="비밀번호"
+                    required
+                  />
+                  <span class="sub"
+                    >(영문 대소문자/숫자/특수문자 중 2가지 이상 조합,
+                    8자~16자)</span
+                  >
+                </td>
+              </tr>
+              <tr>
+                <th>비밀번호 확인 <span class="warning">*</span></th>
+                <td>
+                  <input
+                    type="password"
+                    minlength="8"
+                    maxlength="16"
+                    placeholder="비밀번호를 한번더 입력해주세요."
+                    name="mb_pass_ck"
+                    id="mb_pass_ck"
+                    title="비밀번호 확인"
+                    required
+                  />
+                  <span class="sub">(영문소문자/숫자, 4-16자)</span>
+                </td>
+              </tr>
+              <tr>
+                <th>이름 <span class="warning">*</span></th>
+                <td>
+                  <input type="text" name="mb_name" id="mb_name" required />
+                  <span class="sub">(영문소문자/숫자, 4-16자)</span>
+                </td>
+              </tr>
+              <tr>
+                <th>주소</th>
+                <td>
+                  <input type="number" name="" id="" />
+                  <button type="button">우편번호</button><br />
+                  <input type="text" name="" id="" readonly required /><span
+                    class="sub"
+                    >기본주소</span
+                  ><br />
+                  <input type="text" name="" id="" /><span class="sub"
+                    >나머지주소(선택입력 가능)</span
+                  >
+                </td>
+              </tr>
+              <tr>
+                <th>일반전화</th>
+                <td>
+                  <select name="" id="">
+                    <option value="">02</option>
+                    <option value="">051</option>
+                    <option value="">052</option>
+                    <option value="">053</option>
+                    <option value="">054</option>
+                    <option value="">055</option>
+                  </select>
+                  -
+                  <input
+                    type="number"
+                    min="0000"
+                    max="9999"
+                    name="mb_tel2"
+                    id="mb_tel2"
+                    class="input-min"
+                    title="일반전화중간자리"
+                  />
+                  -
+                  <input
+                    type="number"
+                    min="0000"
+                    max="9999"
+                    name="mb_tel3"
+                    id="mb_tel3"
+                    class="input-min"
+                    title="일반전화뒷자리"
+                  />
+                </td>
+              </tr>
+              <tr>
+                <th>휴대전화 <span class="warning">*</span></th>
+                <td>
+                  <select name="" id="">
+                    <option value="">010</option>
+                    <option value="">011</option>
+                    <option value="">012</option>
+                    <option value="">014</option>
+                    <option value="">018</option>
+                    <option value="">019</option>
+                  </select>
+                  -
+                  <input
+                    type="number"
+                    min="0000"
+                    max="9999"
+                    name="mb_hp2"
+                    id="mb_hp2"
+                    class="input-min"
+                    title="핸드폰중간자리"
+                  />
+                  -
+                  <input
+                    type="number"
+                    min="0000"
+                    max="9999"
+                    name="mb_hp3"
+                    id="mb_hp3"
+                    class="input-min"
+                    title="핸드폰뒷자리"
+                  />
+                </td>
+              </tr>
+              <tr>
+                <th>SMS수신여부 <span class="warning">*</span></th>
+                <td>
+                  <span><input type="checkbox" />동의함</span>
+                  <p>
+                    <span class="sub"
+                      >쇼핑몰에서 제공하는 유익한 이벤트 소식을 sms로 받으실 수
+                      있습니다</span
+                    >
+                  </p>
+                </td>
+              </tr>
+              <tr>
+                <th>이메일 <span class="warning">*</span></th>
+                <td>
+                  <input type="email" name="" id="" required />
+                  (영문소문자/숫자, 4-16자)
+                </td>
+              </tr>
+              <tr>
+                <th>이메일 수신여부 <span class="warning">*</span></th>
+                <td>
+                  <span><input type="checkbox" />동의함</span>
+                  <p>
+                    <span class="sub"
+                      >쇼핑몰에서 제공하는 유익한 이벤트 소식을 sms로 받으실 수
+                      있습니다</span
+                    >
+                  </p>
+                </td>
+              </tr>
+              <tr>
+                <th>평생회원</th>
+                <td>
+                  <input type="radio" name="mb_allday" />동의함
+                  <input type="radio" name="mb_allday" checked />동의안함
+                  <ul class="list">
+                    <li>
+                      <span class="sub"
+                        >평생회원으로 가입하시면 스타일앤 회원탈퇴시까지는
+                        휴면회원으로 전환되지 않으며, 고객님의 개인정보가
+                        탈퇴시까지 안전하게 보관됩니다.</span
+                      >
+                    </li>
+                    <li>
+                      <span class="sub"
+                        >지금 평생회원으로 가입하시면 쿠폰혜택을
+                        드립니다.(쿠폰혜택을 받으신 경우, 3개월간 평생회원을
+                        유지하셔야 합니다.)</span
+                      >
+                    </li>
+                  </ul>
+                </td>
+              </tr>
+            </table>
+          </div>
+          <div class="tb-area">
+            <div class="title-area">
+              <h4>추가정보</h4>
+            </div>
+            <table>
+              <tr>
+                <th>생년월일 <span class="warning">*</span></th>
+                <td>
+                  <input type="number" class="input-min" required />년
+                  <input type="number" class="input-min" required />월
+                  <input type="number" class="input-min" required />일
+                  <span
+                    ><input type="radio" name="mb_birth" checked />양력</span
+                  >
+                  <span><input type="radio" name="mb_birth" />음력</span>(14세
+                  미만 회원가입을 제한하고 있습니다.)
+                </td>
+              </tr>
+              <tr>
+                <th>성별</th>
+                <td>
+                  <input type="radio" name="mb_gender" />남자
+                  <input type="radio" name="mb_gender" />여자
+                </td>
+              </tr>
+              <tr>
+                <th>상의사이즈</th>
+                <td>
+                  <input type="checkbox" name="mb_top_size" />90-95
+                  <input type="checkbox" name="mb_top_size" />100-105
+                  <input type="checkbox" name="mb_top_size" />110-115
+                  <input type="checkbox" name="mb_top_size" />120-125
+                  <input type="checkbox" name="mb_top_size" />130-
+                </td>
+              </tr>
+              <tr>
+                <th>하의사이즈</th>
+                <td>
+                  <input type="checkbox" name="mb_bt_size" />-30
+                  <input type="checkbox" name="mb_bt_size" />32
+                  <input type="checkbox" name="mb_bt_size" />33
+                  <input type="checkbox" name="mb_bt_size" />34
+                  <input type="checkbox" name="mb_bt_size" />35
+                  <input type="checkbox" name="mb_bt_size" />36
+                  <input type="checkbox" name="mb_bt_size" />37
+                  <input type="checkbox" name="mb_bt_size" />38
+                  <input type="checkbox" name="mb_bt_size" />39
+                  <input type="checkbox" name="mb_bt_size" />30
+                  <input type="checkbox" name="mb_bt_size" />42-
+                </td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </section>
+    </div>
+  </body>
+</html>

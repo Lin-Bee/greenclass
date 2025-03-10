@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <style> 
+    table{
+      border:1px solid black;
+      border-collapse: collapse; 
+      min-width: 500px;   
+    }
+    tr,td,th{padding:1% 1%; border:1px solid black; box-sizing: border-box;}
+  </style>
+
+  <h2>테스트</h2>
+  <table>
+    <tr>
+      <td>1</td>
+      <td>2</td>
+      <td>3</td>
+      <td>4</td>
+      <td>5</td>
+    </tr>
+    <tr>
+      <td colspan="3">6</td>
+      <td>7</td>
+      <td>8</td>
+    </tr>
+    <tr>
+      <td>9</td>
+      <td>10</td>
+      <td>11</td>
+      <td colspan="2">12</td>
+    </tr>
+    <tr>
+      <tr>
+        <td colspan="4">13</td>
+        <td>14</td>
+      </tr>
+    </tr>
+  </table>
+  <br>
+  <h2>풍차돌리기</h2>
+  <table style="text-align: center;">
+    <tr>
+      <td rowspan="2" style="background-color: rgb(255, 230, 0);">1</td>
+      <td colspan="2" style="background-color: rgb(132, 200, 30);">2</td>
+    </tr>
+    <tr>
+      <td style="background-color: skyblue;">3</td>
+      <td rowspan="2" style="background-color: rgb(230, 130, 16);">5</td>
+    </tr>
+    <tr>
+      <td colspan="2" style="background-color: #ccc;">4</td>
+    </tr>
+  </table>
+
+</body>
+</html>

@@ -1,0 +1,11 @@
+@charset "utf-8";
+div{border:1px solid black; width:300px; height:300px; font-size:3rem; text-align: center; line-height: 300px;}
+
+/*z-index를 설정할 경우
+ z-indxx가 크면 클수록 가능
+ 설정이 먹히려면 position을 양쪽에 모두 주거나 주지않아야한다.
+
+*/
+.d1{position:relative; background:bisque; z-index:2;}
+
+.d2{position:absolute; top:100px; left:100px; background:chocolate;}

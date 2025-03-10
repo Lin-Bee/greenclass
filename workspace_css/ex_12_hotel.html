@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="./reset.css">
+  <link rel="stylesheet" href="./common.css">
+  <link rel="stylesheet" href="./layout.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link rel="stylesheet" href="./ex_12_hotel.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script>
+    $(document).ready(function(){
+        $("#heart").click(function(){
+            $(this).parents(".list-box").toggleClass("on");
+        });
+    });
+  </script>
+</head>
+<body>
+  <div class="container">
+    <div class="list-area flex ju-between ai-center">
+      <!--변수-->
+      <div class="list-box">
+        <div class="flex ju-between fd-column ai-center list-info">
+          <div class="img-area">
+            <button type="button" class="heart" id="heart">
+              <p class="ck-noting">
+                <i class="fa-regular fa-heart"></i></p>
+              <p class="ck-like">
+                <i class="fa-solid fa-heart"></i></p>
+            </button>
+            <img src="./house.jpg" alt="집사진">
+            
+          </div>
+          <a href="#" target="_blank">
+            <div class="txt-area">
+              <div class="tit-area">
+                <p class="txt bold ">Green Hotel 4th floor suite room</p>
+                <p class="txt bold price import">$599,999</p>
+                <p class="txt thin">with terrace & wine bar</p>
+              </div>
+              <div class="info-area flex ai-center ju-center">
+                <dl class="flex ai-center">
+                  <dt class="txt bold"><i class="fa-solid fa-bed"></i>  <span> 4</span></dt>
+                  <dd>Bedrooms</dd>
+                </dl>
+                <dl class="flex ai-center">
+                  <dt class="txt bold"><i class="fa-solid fa-bath"></i> <span> 3</span></dt>
+                  <dd>Bathrooms</dd>
+                </dl>
+              </div>
+              <div class="user-info-area">
+                <p class="txt thin">Real Estate Agent</p>
+                <div class="flex ju-between ai-center">
+                  <div class="user-box flex ai-center">
+                    <div class="user-img"><img src="./face-01.jpg" alt="사람"></div>
+                    <div class="user-info flex fd-column ju-between">
+                      <p class="user-name txt bold">Sandy Foxx</p>
+                      <p class="user-call">052-7777-8888</p>
+                    </div>
+                  </div>
+                  <div class="btn-area">
+                    <div class="btn">INQUIRE</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+        <!--변수-->
+      </div>
+    </div>
+  </div>
+</body>
+</html>

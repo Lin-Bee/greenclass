@@ -1,0 +1,15 @@
+@charset "utf-8";
+
+.basic{ background-color:blueviolet;}
+
+.large{width:80%;}
+
+.my-input{
+  padding:4px;
+  border:1px solid blueviolet;
+  border-radius: 5px;
+}
+.my-input:focus{outline:2px solid blueviolet;}
+
+.small{width:60px;}
+.large{width:300px;}

@@ -1,0 +1,11 @@
+@charset "utf-8";
+  /* 안배운코드 */
+  table{margin:10px auto; }
+  th,td{padding:6px;}
+  /* 배운코드 */
+  table{width:800px;border-collapse: collapse;}
+  th{background-color: aqua;}
+  th,td{border:1px solid #333;}
+  .important{color:red;}
+  .txt-center{font-weight:bold; text-align: center;}
+  .btn-area{text-align: center;}

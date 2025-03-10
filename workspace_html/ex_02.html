@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<style> 
+  table{
+    border:1px solid black;
+    border-collapse: collapse; 
+    min-width: 500px;   
+  }
+  thead{background:#eee; border-top:3px solid #333; border-bottom:2px solid #333;}
+  tr,td,th{padding:1% 1%; border:1px solid black; box-sizing: border-box;}
+  
+</style>
+<body>
+  
+  <h2>예시 테이블</h2>
+  <table>
+    <thead>
+      <tr>
+        <th rowspan="2">Empno</th>
+        <th colspan="4">Marks</th>
+      </tr>
+      <tr>
+        <th>Set A</th>
+        <th>Set B</th>
+        <th>Set C</th>
+        <th>Set D</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>1001</td>
+        <td>45</td>
+        <td>20</td>
+        <td>30</td>
+        <td>95</td>
+      </tr>
+      <tr>
+        <td>1002</td>
+        <td>15</td>
+        <td>5</td>
+        <td>10</td>
+        <td>30</td>
+      </tr>
+      <tr>
+        <td>1003</td>
+        <td>40</td>
+        <td>15</td>
+        <td>10</td>
+        <td>65</td>
+      </tr>
+    </tbody>
+  </table>
+  <br>
+  <table>
+    <thead>
+      <tr>
+        <th rowspan="3">Day</th>
+        <th colspan="3">Seminar</th>
+      </tr>
+      <tr>
+        <th colspan="2">Schedule</th>
+        <th colspan="2" rowspan="2">Topic</th>
+      </tr>
+      <tr>
+        <th>Begin</th>
+        <th>End</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td rowspan="2">Monday</td>
+        <td rowspan="2">8:00 a.m.</td>
+        <td rowspan="2">11:00 a.m.</td>
+        <td>Introduction to XML</td>
+      </tr>
+      <tr>
+        <td>Validity:DTD and Relax NG</td>
+      </tr>
+      <tr>
+        <td rowspan="3">Tuesday</td>
+        <td>8:00 a.m.</td>
+        <td>11:00 a.m.</td>
+        <td>XPath</td>
+      </tr>
+      <tr>
+        <td>11:00 a.m.</td>
+        <td>2:00 p.m.</td>
+        <td rowspan="2">XSL Transformaions</td>
+      </tr>
+      <tr>
+        <td>2:00 p.m.</td>
+        <td>5:00 p.m.</td>
+      </tr>
+      <tr>
+        <td>Wendnesday</td>
+        <td>8:00 a.m.</td>
+        <td>12:00 p.m.</td>
+        <td>XSL Formatting Objects</td>
+      </tr>
+    </tbody>
+  </table>
+</body>
+</html>

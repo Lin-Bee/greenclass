@@ -1,0 +1,8 @@
+@charset "utf-8";
+.header{height:100px; display:flex; justify-content: space-around; background:#333; color:white; }
+
+.header > div{width:30%; display:flex; align-items: center;}
+
+.header ul{width:100%; display:flex; justify-content: space-between; align-items: center;}
+
+.header .right ul li{width:20%;}

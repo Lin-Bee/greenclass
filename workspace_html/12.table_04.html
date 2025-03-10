@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="./common.css">
+  <link rel="stylesheet" href="./layout.css">
+</head>
+<style>
+  tr,td,th{border:1px solid #333;}
+</style>
+<body>
+  <div id="wrap">
+    <div class="inner">
+      <table>
+        <!--thead의 경우 컴퓨터로 넣으면 가장 위로 올라가게 됨-->
+        <thead>
+          <tr> <!-- 제목줄에는 td대신 th를 사용하기도 함 -->
+            <th>학번</th>
+            <th>이름</th>
+            <th>국어점수</th>
+            <th>영어점수</th>
+            <th>수학점수</th>
+          </tr>
+        </thead>
+        <!--thead의 경우 컴퓨터로 넣으면 가장 위로 올라가게 됨-->
+        <tbody>
+          <tr>
+            <td>1</td>
+            <td>김길동</td>
+            <td class="txt-right">60</td>
+            <td class="txt-right">60</td>
+            <td class="txt-right">50</td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>이길동</td>
+            <td class="txt-right">60</td>
+            <td class="txt-right">80</td>
+            <td class="txt-right">70</td>
+          </tr>
+        </tbody>
+        <tfoot>
+          <tr>
+            <th colspan="2">총합</th>
+            <td class="txt-right">120</td>
+            <td class="txt-right">140</td>
+            <td class="txt-right">120</td>
+          </tr>
+        </tfoot>
+      </table>
+    </div>
+  </div>
+</body>
+</html>

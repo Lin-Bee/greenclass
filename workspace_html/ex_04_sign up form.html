@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="./common.css">
+  <link rel="stylesheet" href="./layout.css">
+</head>
+<style>
+  
+  table{width:100%; font-size:12px;}
+  td span{display: inline-block;}
+</style>
+<body>
+  <div class="container">
+    <div class="inner sub">
+      <div class="title-area">
+        <h2>회원가입</h2>
+        <p>Become a member of Andrew's Company, and enjoy a variety of benefits</p>
+      </div>
+
+      <div class="cont-area ">
+        <table>
+          <thead>
+          </thead>
+          <tbody>
+            <tr>
+              <th>Name</th>
+              <td><input type="text" minlength="2" placeholder="이름을 입력하세요" name="mb_name" id="mb_name" title="이름">
+                <p class="warning"><span>*2글자 이상 입력해주세요.</span></p>
+              </td>
+            </tr>
+            <tr>
+              <th>ID</th>
+              <td><input type="text" placeholder="아이디를 입력하세요" name="mb_id" id="mb_name" title="아이디"> <input type="button" value="중복확인">
+                <p class="warning"><span>*이미 사용중인 아이디 입니다.</span></p>
+                <p class="check"><span>*사용가능한 아이디입니다.</span></p>
+              </td>
+            </tr>
+            <tr>
+              <th>Password</th>
+              <td><input type="password" minlength="6" placeholder="비밀번호를 입력해주세요."name="mb_pass" id="mb_pass" title="비밀번호">
+                <!-- <p class="warning"><span>*비밀번호는 6자리 이상으로 설정해주시기 바랍니다.</span></p> -->
+              </td>
+            </tr>
+            <tr>
+              <th>Confirm Password</th>
+              <td>
+                <input type="password" minlength="6" placeholder="비밀번호 확인"name="mb_pass_ck" id="mb_pass_ck" title="비밀번호 확인">
+                <span class="check">✓</span>
+                <p class="warning"><span>비밀번호를 확인해주시기 바랍니다.</span></p>
+              </td>
+            </tr>
+            <tr>
+              <th>Mobile</th>
+              <td>
+                <select name="" id="">
+                  <option value="">010</option>
+                  <option value="">011</option>
+                  <option value="">012</option>
+                  <option value="">014</option>
+                  <option value="">018</option>
+                  <option value="">019</option>
+                </select>
+                -
+                <input type="number" min="0000" max="9999" name="mb_hp2" id="mb_hp2" title="핸드폰중간자리" /> - <input type="number" min="0000" max="9999" name="mb_hp3" id="mb_hp3" title="핸드폰뒷자리"/>
+              </td>
+            </tr>
+            <tr>
+              <th>E-mail</th>
+              <td><input type="text" name="mb_email_id" id="mb_email_id" title="이메일 아이디"> @
+                <input type="text" placeholder="example.com" value="">
+                <select name="mb_email_adr" id="mb_email_adr" >
+                  <option value="">직접입력</option>
+                  <option value="">naver.com</option>
+                  <option value="">daum.net</option>
+                  <option value="">gmail.com</option>
+                </select>
+              </td>
+            </tr>
+            <tr>
+              <th>Whether to receive email?</th>
+              <td><input type="checkbox">Acceptance</td>
+            </tr>
+            <tr>
+              <th>Interest</th>
+              <td>
+                <span><input type="checkbox" name="" id="" value="Movie" >Movie</span>
+                <span><input type="checkbox" name="" id="" value="Theater">Theater</span>
+                <span><input type="checkbox" name="" id="" value="Travel">Travel</span>
+                <span><input type="checkbox" name="" id="" value="Mountain Climbing">Mountain Climbing</span>
+                <span><input type="checkbox" name="" id="" value="Visiting a restaurant">Visiting a restaurant</span>
+                <span><input type="checkbox" name="" id="" value="Volunteer" checked>Volunteer</span>
+                <span><input type="checkbox" name="" id="" value="Etc">Etc</span>
+              </td>
+            </tr>
+            <tr>
+              <th>Gender</th>
+              <td>
+                <!-- 라디오타입은 name 속성을 통해 하나만 선택되게 하기 -->
+                <input type="radio" name="mb_gender" value="f" checked>Female
+                <input type="radio" name="mb_gender" value="m">Male
+                <input type="radio" name="mb_gender" value="other">Other
+              </td>
+            </tr>
+            <tr>
+              <th>Path learned</th>
+              <td>
+                <select name="" id="">
+                  <option value="" selected disabled>choose</option>
+                  <option value="">Enternet</option>
+                  <option value="">School</option>
+                  <option value="">Academy</option>
+                  <option value="">Book</option>
+                  <option value="">Etc</option>
+                </select>
+              </td>
+            </tr>
+            <tr>
+              <td colspan="2">
+                <textarea cols="30" rows="5" name="" id=""></textarea>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <div class="btn-area flex ai-center ju-center">
+          <input type="button" value="Sign up" onclick="Submit('')"/>
+          <button type="button" value="Cancle">Cancle</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

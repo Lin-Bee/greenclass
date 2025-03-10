@@ -1,0 +1,16 @@
+@charset "utf-8";
+
+div{color:blue;}
+
+div{background-color: greenyellow;}
+
+.p1{color:red;}
+
+.p1{background-color: skyblue;}
+
+/* 
+ 선택자가 달라도 같은 태그를 가리키면 모두 적용
+*/
+
+.s1{font-style: italic; font-size:12px;}
+span{font-size:20px;}

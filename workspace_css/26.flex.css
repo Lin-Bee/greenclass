@@ -1,0 +1,33 @@
+@charset "utf-8";
+h1{font-weight:600; font-size:40px;}
+.container{width:500px; height:200px; border:1px solid black; margin:30px auto;
+
+display:flex;
+flex-direction: row;
+justify-content: space-between;
+align-items: stretch;
+}
+
+
+.container > div{border:1px solid red;
+  align-items:flex-start;
+  word-break: break-all;
+  flex-basis:flex;
+}
+.d1{align-self: flex-end; flex:1;}
+.d2{align-self: center; flex:1;}
+.d3{flex:1;}
+.d4{flex:1;}
+
+.test{
+  border:1px solid black;
+  background:red;
+  color:white;
+  font-size:1rem;
+  width:100px;
+  height:100px;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+}
+ 
