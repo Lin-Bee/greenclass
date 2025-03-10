@@ -1,0 +1,5 @@
+.detail_container{}
+.detail_container th{padding:8px;background:#333; color:#fff;}
+.detail_container td{padding:8px;}
+.detail_container table tr:nth-child(1){text-align: center; vertical-align: middle;}
+.detail_btn{text-align: right;}

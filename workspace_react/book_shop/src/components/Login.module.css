@@ -1,0 +1,17 @@
+.login{
+  width:60%;
+  margin:0 auto;
+}
+
+.login .container{
+  background:#eee;
+  border-radius: 8px;
+  padding:30px 20px;
+  margin:20px 0;
+}
+
+.login .container > div{margin-bottom:20px;}
+
+.login .container p{margin-bottom:4px; font-weight: bold;}
+.login .container input{padding:4px;}
+.login .container button{width:100%; display:block; padding:10px 4px;}

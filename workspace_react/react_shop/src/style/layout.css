@@ -1,0 +1,35 @@
+.OrderCategory {
+  margin: 0;
+  background: #433878;
+}
+.OrderCategory li {
+  width: 25%;
+  text-align: center;
+  list-style: none;
+}
+
+.OrderCategory li a.active,
+.OrderCategory li span.active,
+.OrderCategory li:hover a,
+.OrderCategory li:hover span {
+  cursor: pointer;
+  color: #e6f17b;
+}
+
+
+.OrderCategory li a,
+.OrderCategory li span {
+  padding: 20px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  display: inline-block;
+  color: #fff;
+}
+
+.inner{width:90%; margin: 1rem auto; font-size:1rem;}
+
+.show-item-area{}
+.show-item-area .list-area{width:50%;}
+.show-item-area .list-area > p{font-size:0.8rem; color:#555;}
+.show-item-area .list-area table{margin-top:0.5rem; background:#dbf1ff;}
+.show-item-area .detail-area{width:50%;}

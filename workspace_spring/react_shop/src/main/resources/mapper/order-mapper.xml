@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!-- 해당 파일에 모든 쿼리문을 작성 -->
+<!-- namespace에는 xml파일과 연결할 Mapper interface 파일명을 패키지를 포함하여 적어주세요 -->
+<mapper namespace="com.green.react_shop.mapper.OrderMapper">
+   	<select id="allOrderList" resultType="OrderDTO">
+        SELECT ORDER_NUM
+            ,ITEM_INFO.ITEM_NUM
+            ,ITEM_INFO.ITEM_NAME
+            ,ITEM_INFO.ITEM_PRICE
+            ,BUYER
+            ,BUY_CNT
+            ,BUY_PRICE
+            ,BUY_DATE
+        FROM ORDER_INFO INNER JOIN ITEM_INFO
+        ON ITEM_INFO.ITEM_NUM = ORDER_INFO.ITEM_NUM
+    </select>
+
+    <insert id="insertOrder">
+        INSERT INTO ORDER_INFO
+        (
+        ITEM_NUM
+        ,BUYER
+        ,BUY_CNT
+        ,BUY_PRICE)
+        VALUES
+        (
+         #{itemNum}
+        ,#{buyer}
+        ,#{buyCnt}
+        ,(SELECT ITEM_PRICE
+            FROM ITEM_INFO
+            WHERE ITEM_NUM=#{itemNum})*#{buyCnt}
+        )
+    </insert>
+
+</mapper>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

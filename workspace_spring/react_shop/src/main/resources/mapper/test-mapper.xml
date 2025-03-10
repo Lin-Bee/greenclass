@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!-- 해당 파일에 모든 쿼리문을 작성 -->
+<!-- namespace에는 xml파일과 연결할 Mapper interface 파일명을 패키지를 포함하여 적어주세요 -->
+<mapper namespace="com.green.react_shop.mapper.TestMapper">
+    <!-- resultMap : 조회결과 데이터를 자바로 가져오기위해 직접 커스터마이징하는 기능-->
+    <!-- column : 실제 데이터베이스에서 >조회<되는 컬럼명을 작성 : 별칭가능-->
+    <!-- property : 조회되는 컬럼의 값을 가져올 변수명-->
+
+    <!-- select를 할때 resultType혹은 resultMap이용 가능   -->
+    <!--DB join할경우 Map으로 가져오면 용이하나-->
+    <!--resultMap의 작성필요-->
+    <!--  orderDTO안의 변수명 해당아이 사용시 가상테이블명사용가능: 자료형유지-->
+    <resultMap id="board" type="BoardDTO">
+        <id column="BOARD_NUM" property="boardNum"/>
+        <result column="TITLE" property="title"/>
+        <result column="WRITER" property="writer"/>
+        <result column="CONTENT" property="content"/>
+        <result column="READ_CNT" property="readCnt"/>
+        <result column="REG_DATE" property="regDate"/>
+
+        <collection property="replyList" ofType="ReplyDTO">
+            <id column="REPLY_NUM" property="replayNum"/>
+            <result column="REPLY_CONTENT" property="replyContent"/>
+            <result column="REPLY_WRITER" property="replyWriter"/>
+            <result column="REPLY_REG_DATE" property="replyRegDate"/>
+            <result column="BOARD_NUM" property="boardNum"/>
+        </collection>
+
+<!--    1:1일때 사용
+        <association property="" javaType="">
+            <id column="" property=""/> pk
+            <result column="" property=""/>
+       </association> -->
+    </resultMap>
+
+    <select id="joinList" resultMap="board">
+        SELECT
+        B.BOARD_NUM
+        ,TITLE
+        ,WRITER
+        ,REPLY_CONTENT
+        ,REPLY_WRITER
+        FROM BOARD B INNER JOIN BOARD_REPLY R
+        ON B.BOARD_NUM = R.BOARD_NUM
+    </select>
+
+    <select id="getBoardList" resultMap="board">
+        SELECT * FROM BOARD;
+    </select>
+
+    <select id="getBoard" resultMap="board">
+        SELECT BOARD_NUM,TITLE,WRITER
+        FROM BOARD
+        WHERE BOARD_NUM = #{boardNum};
+    </select>
+
+
+</mapper>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

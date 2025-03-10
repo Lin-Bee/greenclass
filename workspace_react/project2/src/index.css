@@ -1,0 +1,15 @@
+.bg-red {
+  width: 80px;
+  height: 80px;
+  line-height: 80px;
+  text-align: center;
+  font-size: 32px;
+  background: red;
+  color: #fff;
+}
+.bg-red.ad {
+  width: auto;
+  padding: 0 30px;
+}
+
+span.bg-red{display:inline-block; margin-right:10px;}

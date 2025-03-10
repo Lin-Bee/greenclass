@@ -1,0 +1,45 @@
+.inner {
+  width: 80%;
+  margin: 0 auto;
+}
+.Function {
+  margin-top: 60px;
+}
+.area-ck {
+  font-style: italic;
+  color: red;
+}
+
+h2 {
+  margin: 50px auto;
+  text-align: center;
+}
+
+.gray-box {
+  background: lightgray;
+  width: 700px;
+  margin: 0 auto;
+  padding: 20px;
+  border-radius: 15px;
+}
+
+.gray-box ul {
+  justify-content: space-between;
+  align-items: center;
+}
+
+.gray-box ul li {
+  width: 14%;
+  padding: 1%;
+  text-align: center;
+}
+
+.gray-box ul li p:nth-child(1) {
+  background: crimson;
+  margin-bottom:0.5rem;
+  border-radius: 0.3rem;
+  color:#fff;
+  font-size:2rem;
+  font-weight:bold;
+  line-height: 60px;;
+}

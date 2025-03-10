@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!-- 해당 파일에 모든 쿼리문을 작성 -->
+<!-- namespace에는 xml파일과 연결할 Mapper interface 파일명을 패키지를 포함하여 적어주세요 -->
+<mapper namespace="mapper">
+    <!--select tag는 반드시 resultType속성을 갖야함 : 자료형 선언 -->
+    <!--select를 제외한 (insert,update,delete)는 resultType 사용안함-->
+
+    <!--글번호가 1번인 게시글의 조회수 조회-->
+    <select id="selectReadCnt" resultType="int">
+        SELECT READ_CNT
+        FROM BASIC_BOARD
+        WHERE BOARD_NUM = #{boardNum}
+    </select>
+
+    <select id="selectBoardTitle" resultType="String">
+        SELECT TITLE
+        FROM BASIC_BOARD
+        WHERE BOARD_NUM = 1
+    </select>
+
+    <!--테스트용데이터-->
+    <select id="getTitles" resultType="String">
+        SELECT TITLE
+        FROM BASIC_BOARD
+        WHERE READ_CNT > #{readCnt}
+    </select>
+
+    <!--한줄의 데이터를 가져오는 아이-->
+    <select id="selectAllReadCnt" resultType="int">
+        SELECT READ_CNT
+        FROM BASIC_BOARD
+    </select>
+
+    <!--title을 작성한 작성자-->
+    <select id="selectTitleWriter" resultType="String">
+        SELECT WRITER
+        FROM BASIC_BOARD
+        WHERE TITLE = #{TITLE}
+    </select>
+
+    <select id="selectTitleCntNWriter" resultType="String">
+        SELECT TITLE
+        FROM BASIC_BOARD
+        WHERE READ_CNT = #{READ_CNT}
+        AND WRITER = #{WRITER}
+    </select>
+
+    <!-- 우리가 만든 자료형인 BoardDTO와 같은걸 사용하기 위해서는
+         패키지명을 함께 알려줘야함 : com.green.basic_board.dto.BoardDTO  -->
+    <select id="selectAllWriter" resultType="BoardDTO">
+        SELECT *
+        FROM BASIC_BOARD
+        WHERE BOARD_NUM = 1
+    </select>
+
+    <!-- 모든 게시글의 정보를 조회하는 쿼리문 -->
+    <!--그래서 더 쉽고 간편하게 쓸수있는 우리의 방법 application.properties에서 조정-->
+    <select id ="selectBoardList" resultType="BoardDTO">
+        SELECT *
+        FROM BASIC_BOARD
+        ORDER BY CREATE_DATE DESC
+    </select>
+</mapper>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

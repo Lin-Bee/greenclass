@@ -1,0 +1,16 @@
+.btn{
+  padding:4px 16px;
+  font-size:0.7rem;
+  background-color: rgba(13, 160, 8, 0.712);
+  color:white;
+  border:none;
+  border-radius:4px;
+}
+
+.btn:hover{
+  background-color: rgba(13, 160, 8, 0.9);
+}
+
+.btn.bsize_small{width:80px;}
+.btn.bsize_normal{width:100px;}
+.btn.bsize_large{width:140px;}

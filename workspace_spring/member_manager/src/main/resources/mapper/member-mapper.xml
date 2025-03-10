@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!-- 해당 파일에 모든 쿼리문을 작성 -->
+<!-- namespace에는 xml파일과 연결할 Mapper interface 파일명을 패키지를 포함하여 적어주세요 -->
+<mapper namespace="com.green.member_manager.mapper.MemberMapper">
+    <select id="showMemberList" resultType="MemberDTO">
+        SELECT MEM_ID
+        , MEM_NAME
+        , MEM_TELL
+        , JOIN_DATE
+        FROM REACT_MEMBER
+    </select>
+    <!-- 필요한거만 가져가기-->
+
+    <insert id="insertMemberList">
+        INSERT INTO REACT_MEMBER(
+        MEM_ID
+        ,MEM_NAME
+        ,MEM_PW
+        ,MEM_TELL
+        ,MEM_INTRO
+        )
+        VALUES(
+        #{memId}
+        ,#{memName}
+        ,#{memPw}
+        ,#{memTell}
+        ,#{memIntro}
+        )
+    </insert>
+
+    <select id="showMemberDetail" resultType="MemberDTO">
+        SELECT MEM_ID
+        , MEM_NAME
+        , MEM_PW
+        , MEM_TELL
+        , MEM_INTRO
+        , JOIN_DATE
+        FROM REACT_MEMBER
+        WHERE MEM_ID = #{memId}
+    </select>
+
+    <!--  이런식의 작업형식|테이블|by기준  -->
+    <!-- 사용시에 이름 유사하게 할것  -->
+    <select id="findMemberByMemId">
+        SELECT *
+        FROM REACT_MEMBER
+        WHERE MEM_ID = #{memId}
+    </select>
+
+    <update id="updateMemberInfo">
+        UPDATE REACT_MEMBER
+        SET	MEM_NAME = #{memName}
+        , MEM_PW = #{memPw}
+        , MEM_TELL = #{memTell}
+        , MEM_INTRO = #{memIntro}
+        WHERE MEM_ID = #{memId};
+    </update>
+
+    <delete id="deleteMemberInfo">
+        DELETE FROM REACT_MEMBER
+        WHERE MEM_ID = #{memId};
+    </delete>
+
+</mapper>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
