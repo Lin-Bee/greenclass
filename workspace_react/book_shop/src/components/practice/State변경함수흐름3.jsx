@@ -4,7 +4,7 @@ const State변경함수흐름3 = () => {
   const [student, setStudent] = useState({
     name: "hong",
     age: 20,
-    score: 90
+    score: 90,
   });
 
   const changeData = () => {

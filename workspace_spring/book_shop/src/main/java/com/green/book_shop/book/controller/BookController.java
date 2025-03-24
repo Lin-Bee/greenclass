@@ -3,10 +3,8 @@ package com.green.book_shop.book.controller;
 import com.green.book_shop.book.dto.BookDTO;
 import com.green.book_shop.book.service.BookService;
 import lombok.RequiredArgsConstructor;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
+import org.springframework.web.multipart.MultipartFile;
 
 @RestController
 @RequiredArgsConstructor
@@ -16,12 +14,20 @@ public class BookController {
 
   //도서 등록 api
   //post ~/books
+
   @PostMapping("")
-  public void regBook(@RequestBody BookDTO bookDTO){
+  public void regBook(BookDTO bookDTO,
+                      @RequestPart("MainImg") MultipartFile multipartFileMainImg){
+    //데이터확인용
+    System.out.println(bookDTO);
+    System.out.println(multipartFileMainImg);
+
+    //첨부파일(도서이미지)업로드
     bookService.insertBook(bookDTO);
   }
 
-  
+
+
 }
 
 

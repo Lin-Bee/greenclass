@@ -3,21 +3,20 @@ package com.green.book_shop.user.mapper;
 import com.green.book_shop.user.dto.UserDTO;
 import org.apache.ibatis.annotations.Mapper;
 
-import java.util.List;
-
 @Mapper
 public interface UserMapper {
-	//	회원 목록만 > 디테일은 따로
-	public List<UserDTO> selectUserList();
 
-//	등록 반환 INT
-	public boolean insertUser(UserDTO userDTO);
+  //회원 가입
+  public void join(UserDTO userDTO);
 
-	//아이디,전화번호 중복체크용
-	public String isUsableUserId(String userId);
-	public String isUsableUserTel(String userTel);
+  //id 중복 확인
+  public String checkUserId(String userId);
 
-	//로그인체크
-	public UserDTO selectLogin(UserDTO userDTO);
+  //로그인
+  public UserDTO login(UserDTO userDTO);
 
 }
+
+
+
+

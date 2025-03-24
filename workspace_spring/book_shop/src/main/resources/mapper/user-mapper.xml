@@ -3,14 +3,11 @@
 
 <!-- 해당 파일에 모든 쿼리문을 작성 -->
 <!-- namespace에는 xml파일과 연결할 Mapper interface 파일명을 패키지를 포함하여 적어주세요 -->
-
-<!--BOOK_CATEGORY, BOOK 두 테이블과 관련된 쿼리는 여기서 작성!-->
 <mapper namespace="com.green.book_shop.user.mapper.UserMapper">
-    <!--resultMap : 쿼리 결과 데이터를 자바로 가져올 형태를 구성-->
-    <resultMap id="userInfo" type="UserDTO">
+    <resultMap id="user" type="UserDTO">
         <id column="USER_ID" property="userId"/>
-        <result column="USER_PW" property="userPw"/>
         <result column="USER_NAME" property="userName"/>
+        <result column="USER_PW" property="userPw"/>
         <result column="USER_EMAIL" property="userEmail"/>
         <result column="USER_TEL" property="userTel"/>
         <result column="USER_ROLL" property="userRoll"/>
@@ -18,57 +15,40 @@
         <result column="JOIN_DATE" property="joinDate"/>
     </resultMap>
 
-    <!--회원 list조회-->
-    <select id="selectUserList" resultMap="userInfo">
-        SELECT USER_ID
-            , USER_NAME
-            ,USER_EMAIL
-            ,USER_TEL
-            ,USER_ROLL
-            ,IS_USING
-            ,JOIN_DATE
-        FROM SHOP_USER
-        ORDER BY USER_ID
-    </select>
 
-    <!--회원 등록 쿼리-->
-    <insert id="insertUser" >
+    <insert id="join">
         INSERT INTO SHOP_USER (
             USER_ID
-            ,USER_PW
-            ,USER_NAME
-            ,USER_EMAIL
-            ,USER_TEL
+            , USER_PW
+            , USER_NAME
+            , USER_EMAIL
+            , USER_TEL
         ) VALUES (
             #{userId}
-            , #{userPw}
-            , #{userName}
-            , #{userEmail}
-            , #{userTel}
+            ,#{userPw}
+            ,#{userName}
+            ,#{userEmail}
+            ,#{userTel}
         )
     </insert>
 
-    <!--userId 중복 확인-->
-    <select id="isUsableUserId" resultType="String">
+    <!--회원 아이디 중복 확인-->
+    <select id="checkUserId" resultType="String">
         SELECT USER_ID
         FROM SHOP_USER
         WHERE USER_ID = #{userId}
     </select>
 
-    <!--userId 중복 확인-->
-    <select id="isUsableUserTel" resultType="String">
-        SELECT USER_TEL
-        FROM SHOP_USER
-        WHERE USER_TEL = #{userTel}
-    </select>
-
-    <!--로그인쿼리-->
-    <select id="selectLogin" resultMap="userInfo">
-        SELECT USER_ID,USER_NAME,USER_ROLL
+    <!--로그인-->
+    <select id="login" resultMap="user">
+        SELECT USER_ID
+            , USER_NAME
+            , USER_ROLL
         FROM SHOP_USER
         WHERE USER_ID = #{userId}
-          AND USER_PW = #{userPw}
+        AND USER_PW = #{userPw}
     </select>
+
 
 
 </mapper>

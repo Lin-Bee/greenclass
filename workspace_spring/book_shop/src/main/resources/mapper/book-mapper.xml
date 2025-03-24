@@ -11,10 +11,6 @@
         <id column="CATE_CODE" property="cateCode"/>
         <result column="CATE_NAME" property="cateName"/>
     </resultMap>
-    <resultMap id="bookCategory" type="BookCategoryDTO">
-        <id column="CATE_CODE" property="cateCode"/>
-        <result column="CATE_NAME" property="cateName"/>
-    </resultMap>
 
     <!--도서 카테고리 목록 조회-->
     <select id="selectCategoryList" resultMap="bookCategory">
@@ -56,29 +52,6 @@
             #{cateName}
         )
     </insert>
-
-    <!--카테고리 수정-->
-<!--    <update id="updateCategory">-->
-<!--        UPDAT INTO BOOK_CATEGORY (-->
-<!--        CATE_NAME-->
-<!--        ) VALUES (-->
-<!--        #{cateName}-->
-<!--        )-->
-<!--    </update>-->
-
-    <!--카테고리 삭제-->
-    <delete id="deleteCategory">
-        DELETE BOOK_CATEGORY
-        WHERE CATE_CODE = #{cateCode}
-    </delete>
-
-    <!--도서 카테고리 목록 조회-->
-    <select id="selectBookList" resultMap="book">
-        SELECT CATE_CODE
-        , CATE_NAME
-        FROM BOOK_CATEGORY
-        ORDER BY CATE_CODE
-    </select>
 
 </mapper>
 

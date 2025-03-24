@@ -6,7 +6,7 @@ import * as userApi from "../apis/userApi";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 
-const Login = () => {
+const Login = ({setLoginInfo}) => {
   const nav = useNavigate();
   //기본고객정보셋팅용
   const [loginData, setLoginData] = useState({
@@ -40,9 +40,26 @@ const Login = () => {
         if (res.data === '') {
           alert(`아이디 혹은 비밀번호가 맞지 않습니다`);
         } else {
-          setLoginData(res.data);
+          // setLoginData(res.data);
           alert(`어서오세요 ${res.data.userName}님`);
-          nav("/");
+          //sessionStorage에 로그인하는 회원의 아이디, 이름, 권한 정보를 저장한다.
+          sessionStorage.setItem('userId', res.data.userId);
+          sessionStorage.setItem('userName', res.data.userName);
+          sessionStorage.setItem('userRoll', res.data.userRoll);
+
+          //로그인한 회원의 아이디, 이름, 권한 정보만 가진 객체 생성 
+          const loginInfo = {
+            userId : res.data.userId,
+            userName : res.data.userName,
+            userRoll: res.data.userRoll
+          }
+          //loginInfo 객체를 json(객체형태로 생긴 문자열)으로 변환
+          //JSON.stringify 를 이용해서 필요한 값만받아옴
+
+          sessionStorage.setItem('loginInfo',JSON.stringify(loginInfo));
+          setLoginInfo(loginInfo);
+
+          nav(loginInfo.userRoll === 'USER' ? '/' : '/admin/reg-item');
         }
       })
       .cathch((error) => {

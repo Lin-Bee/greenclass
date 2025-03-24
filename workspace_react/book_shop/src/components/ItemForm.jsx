@@ -20,6 +20,15 @@ const ItemForm = () => {
     publisher: "",
     bookInfo: "",
   });
+  
+  //첨부파일(책이미지. 상세) 저장하는 두가지 방법
+  //1. 저장할 변수를 2개 만든다 (1번 진행) ★/ 2. 저장할변수 1개만들어서 2개 넣기
+  //메인이미지 저장변수
+  const [mainImg,setMainImg] = useState(null);
+  
+  //상세이미지 저장변수
+  const [subImg,setSubImg] = useState(null);
+
 
   //카테고리 목록 조회
   useEffect(() => {
@@ -41,8 +50,20 @@ const ItemForm = () => {
 
   //등록 버튼 클릭 시 도서 등록 실행
   const regBook = () => {
-    axios
-      .post("/api/books", bookData)
+    const regForm = new FormData(); //도서 등록시 (db에 insert시) 필요한 데이터 적재
+    regForm.append('cateCode', bookData.cateCode);
+    regForm.append('bookName', bookData.bookName);
+    regForm.append('bookPrice', bookData.bookPrice);
+    regForm.append('publisher', bookData.publisher);
+    regForm.append('bookInfo', bookData.bookInfo);
+
+    //첨부파일 데이터 적재
+    regForm.append('mainImg',mainImg);
+    regForm.append('subImg',subImg);
+     //book을 받아오므로 가능
+    //insertBook(regForm)
+     axios
+      .post("/api/books", regForm)
       .then((res) => {
         alert("성공");
       })
@@ -103,6 +124,18 @@ const ItemForm = () => {
             value={bookData.bookInfo}
             onChange={(e) => changeBookData(e)}
           ></textarea>
+        </div>
+        <div>
+          <p>도서 표지 이미지</p>
+          <input type="file" 
+            onChange={e => setMainImg(e.target.files[0])}
+            />
+        </div>
+        <div>
+          <p>도서 상세 이미지</p>
+          <input type="file" 
+            onChange={e => setSubImg(e.target.files[0])}
+            />
         </div>
       </div>
       <div>
