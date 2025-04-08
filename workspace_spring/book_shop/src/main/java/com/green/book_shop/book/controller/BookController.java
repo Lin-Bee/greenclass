@@ -17,13 +17,15 @@ public class BookController {
 
   @PostMapping("")
   public void regBook(BookDTO bookDTO,
-                      @RequestPart("MainImg") MultipartFile multipartFileMainImg){
+                      @RequestPart(name = "mainImg", required = true) MultipartFile mainImg,
+                      @RequestPart(name = "subImg", required = true) MultipartFile subImg){
     //데이터확인용
     System.out.println(bookDTO);
-    System.out.println(multipartFileMainImg);
+    System.out.println(mainImg);
+    System.out.println(subImg);
 
     //첨부파일(도서이미지)업로드
-    bookService.insertBook(bookDTO);
+//    bookService.insertBook(bookDTO);
   }
 
 

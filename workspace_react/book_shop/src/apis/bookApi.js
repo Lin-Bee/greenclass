@@ -17,11 +17,23 @@ export const insertCategory = (newCateName) => {
   return response;
 };
 
-/**도서 등록 */
-export const insertBook = (bookData) => {
-  const fileConfig = { header: { "Content-Type": "multipart/form-data" } };
-  
-  const response = axios.post("/api/books", bookData, configs);
-  return response;
-};
+/**
+ * 도서 등록
+ * param : 등록할 도서 데이터(객체)
+ * {
+    cateCode : 1,
+    bookName : '',
+    bookPrice : 0,
+    publisher : '',
+    bookInfo : ''
+  }
+ */
+  export const insertBook = (bookData) => {
+    const fileConfig = { header: { "Content-Type": "multipart/form-data" } };
+    
+    const response = axios.post('/api/books', bookData,fileConfig);
+    return response;
+  }
+
+
 
