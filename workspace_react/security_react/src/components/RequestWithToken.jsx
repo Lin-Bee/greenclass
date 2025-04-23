@@ -1,8 +1,7 @@
 
 import React from 'react'
-import axios from "axios";
-
 import { axiosInstance } from '../apis/axiosInstance';
+import { data } from 'react-router-dom';
 
 const RequestWithToken = () => {
 
