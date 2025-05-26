@@ -2,7 +2,7 @@ import { Pressable, StyleSheet, Text, View } from 'react-native'
 import React from 'react'
 import { colors } from '../../constants/colorConstant'
 
-const CustomBtn = ({label='버튼', btnSize='large', ...props}) => {
+const CustomButton = ({label='버튼', btnSize='large', ...props}) => {
   return (
     <View>
       <Pressable {...props}
@@ -20,7 +20,7 @@ const CustomBtn = ({label='버튼', btnSize='large', ...props}) => {
   )
 }
 
-export default CustomBtn
+export default CustomButton
 
 const styles = StyleSheet.create({
   container : {

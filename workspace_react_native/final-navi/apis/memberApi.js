@@ -1,14 +1,11 @@
-import axios from "axios";
-import { Platform } from "react-native";
-const baseUrl =
-  Platform.OS === "IOS" ? "http://localhost:8080" : "http://10.0.2.2:8080";
+import { axiosInstance } from "./axiosInstance";
 
-export const api_join = (joinData) => {
-  const response = axios.post(`${baseUrl}/users/join`, joinData);
+export const API_JOIN = (joinData)=>{
+  const response = axiosInstance.post(`/users/join`,joinData);
   return response;
-};
+}
 
-export const api_login = (loginData) => {
-  const response = axios.post(`${baseUrl}/members/login`, loginData);
+export const API_LOGIN = (loginData)=>{
+  const response = axiosInstance.post(`/member/login`,loginData);
   return response;
-};
+}

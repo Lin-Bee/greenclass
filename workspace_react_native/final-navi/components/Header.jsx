@@ -13,11 +13,11 @@ const Header = () => {
   const dispatch = useDispatch();
 
   const handleLogout = () => {
-    SecureStore.deleteItemAsync('accessToken')
+    SecureStore.deleteItemAsync('accessToken') // 토큰도 없애고 
     .then(() => {
       console.log("SecureStore 삭제 완료");
-      dispatch(logoutReducer());
-      router.replace('/')
+      dispatch(logoutReducer()); // isLogin=false로
+      router.replace('/') // index로 다시 돌아감
     })
     .catch(error => console.error("SecureStore 오류:", error));
   };
@@ -71,7 +71,6 @@ const styles = StyleSheet.create({
     paddingRight: 12
   }
 })
-
 
 
 

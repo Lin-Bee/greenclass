@@ -1,14 +1,14 @@
 import { StyleSheet, Text, View } from 'react-native'
 import React from 'react'
 
-const ProfileHomeScreen = () => {
+const ProfileHome = () => {
   return (
     <View>
-      <Text>index</Text>
+      <Text>여기까지 들어오셨군요 그럼 다시 나가주세요</Text>
     </View>
   )
 }
 
-export default ProfileHomeScreen
+export default ProfileHome
 
 const styles = StyleSheet.create({})

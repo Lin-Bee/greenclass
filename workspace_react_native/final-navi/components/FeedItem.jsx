@@ -1,60 +1,65 @@
-import { Pressable, StyleSheet, Text, View } from 'react-native'
-import React from 'react'
-import { colors } from '../../constants/colorConstant'
-import AntDesign from '@expo/vector-icons/AntDesign';
-import FontAwesome5 from '@expo/vector-icons/FontAwesome5';
+import { Pressable, StyleSheet, Text, View } from "react-native";
+import React from "react";
+import FontAwesome5 from "@expo/vector-icons/FontAwesome5";
+import { colors } from "@/constants/colorConstant";
+import Profile from "./Profile";
+import { Octicons } from "@expo/vector-icons";
 
-const FeedItem = () => {
+
+const FeedItem = ({item}) => {
+  const isLike = true;
   return (
-    <>
       <View style={styles.feedContainer}>
-        <Text style={styles.title}>글제목</Text>
-        <Text style={styles.content}>글내용</Text>
+        <Profile writer={item.wrtier} createDate={item.createDate}/>
+        <Text style={styles.title}>{item.title}</Text>
+        <Text style={styles.content} numberOfLines={2}>
+          {item.content}
+        </Text>
+        <View style={styles.menuContainer}>
+          <Pressable style={styles.menu} >
+            <Octicons name={isLike?'heart-fill':'heart'}size={20} color="red" />
+            <Text style={isLike&&{color:'red'}}>{item.likeCnt}</Text>
+          </Pressable>
+          <Pressable style={styles.menu}>
+            <FontAwesome5 name="comment" size={20} color="black" />
+            <Text>{item.replyCnt}</Text>
+          </Pressable>
+          <Pressable style={styles.menu}>
+            <FontAwesome5 name="eye-slash" size={20} color="black" />
+            <Text>{item.readCnt}</Text>
+          </Pressable>
+        </View>
       </View>
-      <View style={styles.menuContainer}>
-        <Pressable style={styles.menu}>
-          <AntDesign name="heart" size={24} color="black" />
-          <Text>1</Text>
-        </Pressable>
-        <Pressable style={styles.menu}>
-          <FontAwesome5 name="comment-dots" size={24} color="black" />
-          <Text>1</Text>
-        </Pressable>
-        <Pressable style={styles.menu}>
-          <AntDesign name="eyeo" size={24} color="black" />
-          <Text>1</Text>
-        </Pressable>
-    </View>
-    </>
-  )
-}
+  );
+};
 
-export default FeedItem
+export default FeedItem;
 
 const styles = StyleSheet.create({
-  feedContainer:{
-    padding:16
+  feedContainer: {
+    padding: 20,
   },
-  menuContainer:{
-    flexDirection:'row',
-    justifyContent:'space-around',
-    alignItems:'center',
-    borderTopWidth:1,
-    borderTopColor:colors.GRAY_200
+  menuContainer: {
+    flexDirection: "row",
+    gap: 20,
+    alignItems: "center",
+    borderTopWidth: StyleSheet.hairlineWidth,
+    borderTopColor: colors.GRAY_300,
   },
-  menu :{
+  menu:{
     flexDirection:'row',
     justifyContent:'center',
     alignItems:'center',
     paddingVertical:16,
     gap:5,
-    width:'33.3%',
   },
   title:{
-    fontSize:16,
-    marginBottom:12
+    fontSize:20,
+    marginBottom:13
   },
   content:{
-
+    fontSize:14,
+    color:colors.GRAY_500,
+    paddingBottom:13
   }
-})
+});

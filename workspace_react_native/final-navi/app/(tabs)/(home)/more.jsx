@@ -4,7 +4,7 @@ import React from 'react'
 const MoreScreen = () => {
   return (
     <View>
-      <Text>more</Text>
+      <Text>MoreScreen</Text>
     </View>
   )
 }

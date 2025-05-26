@@ -1,7 +1,7 @@
 import { StyleSheet, Text, View } from 'react-native'
 import React, { useState } from 'react'
 import CustomInput from '../../components/common/CustomInput'
-import CustomBtn from '../../components/common/CustomBtn'
+import CustomButton from '../../components/common/CustomButton'
 import { api_login } from '../../apis/memberApi'
 import * as SecureStore from 'expo-secure-store';
 import { useRouter } from 'expo-router'
@@ -49,7 +49,7 @@ const LoginScreen = () => {
         />
       </View>
       <View style={styles.inputArea}>
-        <CustomInput 
+        <CustomInput
           label={'비밀번호'}
           isPw={true}
           value={loginData.memPw}
@@ -57,7 +57,7 @@ const LoginScreen = () => {
         />
       </View>
       <View style={styles.inputArea}>
-        <CustomBtn label='로그인' onPress={() => login()}/>
+        <CustomButton label='로그인' onPress={() => login()}/>
       </View>
     </View>
   )
